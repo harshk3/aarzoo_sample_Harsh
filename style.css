@@ -1,0 +1,220 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+body{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  min-width: 300px;
+  height: 1631px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #F3F5F6 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.main-col{
+  position: absolute;
+  top: 0px;
+left: 0px;
+width: 372px;
+height: 1631px;
+background: #F6F8F8 0% 0% no-repeat padding-box;
+border: 1px solid #DEDEDE;
+opacity: 1;
+}
+
+.logo{
+  position: absolute;
+  top: 32px;
+left: 40px;
+width: 219px;
+height: 45px;
+background: transparent url('new-york-times-logo-png-transparent.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+
+.photo{
+  position: absolute;
+  top: 589px;
+left: 987px;
+width: 429px;
+height: 365px;
+background: transparent url('undraw_treasure_of9i.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.nocontent{
+  position: absolute;
+  top: 298px;
+left: 623px;
+width: 1058px;
+height: 203px;
+text-align: center;
+font-weight: bold;
+font-size: 60px;
+font-family: 'Roboto';
+line-height: 71px;
+letter-spacing: 0px;
+color: #7B8C92;
+opacity: 1;
+}
+
+ul{
+  position: absolute;
+  top: 123px;
+  left: 40px;
+  width: 98px;
+  height: 374px;
+  text-align: left;
+  float: left;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  line-height: 70px;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+ul li{
+
+  float: left;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  line-height: 70px;
+  letter-spacing: 0px;
+  opacity: 1;
+
+
+}
+ul li a{
+  color: #434D71;
+  text-decoration: none;
+}
+ul li a:hover{
+  text-decoration: none;
+  color: #4CA2FF;
+}
+
+
+.wrapper{
+  position: absolute;
+
+  top: 15pt;
+  left: 413pt;
+  width: 465pt;
+  height: 55pt;
+  background: #F8FAFB 0% 0% no-repeat padding-box;
+  border-radius: 5pt;
+  opacity: 1;
+  display: flex;
+}
+
+.wrapper input{
+  border: none;
+  position: relative;
+  background: #F8FAFB 0% 0% no-repeat padding-box;
+margin-left: 70px;
+margin-top: 8px;
+width: 590pt;
+height: 40pt;
+text-align: left;
+line-height: 70px;
+font-family: 'Roboto';
+font-weight: 400;
+font-size: 26px;
+letter-spacing: 0pt;
+color: #979EB7;
+opacity: 1;
+}
+
+.searchbtn{
+  position: absolute;
+margin-left: 25px;
+margin-top: 25px;
+width: 42px;
+height: 70px;
+text-align: left;
+letter-spacing: 0px;
+letter-spacing: 0px;
+color: #979EB7;
+opacity: 1;
+}
+
+
+.submit{
+  position: absolute;
+  top: 26px;
+left: 1211px;
+width: 155px;
+height: 52px;
+text-align: center;
+font-weight: bold;
+background: #4CA2FF 0% 0% no-repeat padding-box;
+border-radius: 26px;
+opacity: 0.6;
+font-size: 18px;
+font-weight: bold;
+line-height: 21px;
+font-family: 'Roboto';
+color:#FFFFFF;
+}
+
+.table{
+  position: absolute;
+  top: 212px;
+left: 413px;
+width: 1500px;
+height: 834px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 2px 8px 19px #B4B8BC29;
+border-radius: 8px;
+opacity: 1;
+display: none;
+}
+
+.name{
+  position: absolute;
+  top: 245px;
+left: 454px;
+width: 90px;
+height: 24px;
+text-align: left;
+font-weight: 600;
+font-size: 20px;
+line-height: 70px;
+font-family: 'Roboto';
+margin-left: 10px;
+letter-spacing: 0px;
+color: #7B8C92;
+opacity: 1;
+}
+
+.heading{
+  position: absolute;
+width: 1279px;
+height: 21px;
+opacity: 1;
+}
+
+.headingele{
+position: relative;
+width: 122px;
+height: 21px;
+text-align: left;
+font-size: 18px;
+font-weight: 400;
+font-family: 'Roboto';
+line-height: 70px;
+letter-spacing: 0px;
+color: #7B8C92;
+opacity: 1;
+}
