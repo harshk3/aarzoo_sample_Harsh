@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/d8f5659b5e.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript" scr="script.js">
+
+</script>
+    <title></title>
+  </head>
+  <body>
+  <section class="main-col">
+      <div>
+      <p class="logo"></p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Messages</a></li>
+          <li><a href="#">Calendar</a></li>
+        </ul>
+      </div>
+    </section>
+<section>
+  <div class="wrapper">
+    <div class="searchbtn">
+      <p><i class="fas fa-search fa-lg"></i></p>
+    </div>
+    <input type="text" name="input" value="" placeholder="Search" id="article">
+  </div>
+  <div class="searchbox">
+    <button type="submit" class="submit" name="button" id="Box" onclick="">Search</button>
+
+  </div>
+  <div><p class="nocontent">Search for breaking news from across the world, across the times.</p></div>
+  <div><p class="photo">
+  </p></div>
+
+
+<table class="table"  id="tablefinal">
+<th class="name">Articles</th>
+<tr class="heading">
+<td class="headingele" style='width:22%'>
+  Publication Date
+</td>
+<td class="headingele">
+  Headline
+</td>
+<td class="headingele">
+  Summary
+</td>
+<td class="headingele">
+  url
+</td>
+<td class="headingele">
+  Source
+</td>
+</tr>
+</table>
+
+</section>
+
+</body>
+<script type="text/javascript">
+
+  var myquery ;
+
+  var url='https://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=20110101&end_date=20200101&%20&api-key=xrp7NPZMKRQ3U8nmHM5UMXu2XwBKYXei';
+  $('#Box').click(function(){
+    myquery=$("#article");
+  url += '&q='+myquery;
+
+    fetch(url).then((response)=>response.json()).then((data)=>{
+      gotData(data);
+    });
+
+  });
+  function gotData(data){
+    document.getElementsByClassName('nocontent')[0].style.display='none';
+    document.getElementsByClassName('photo')[0].style.display='none';
+    document.getElementsByClassName('table')[0].style.display='block';
+    var article = data.response.docs;
+    var $new = $('#tablefinal');
+    $new.text("");
+    for (var i=0; i<article.length;i++){
+
+
+      $new.append(
+      '<tr>'+'<td>'+article[i].pub_date +'</td>'
+        +'<td>'+article[i].headline.main +'</td>'
+        +'<td>'+article[i].abstract +'</td>'
+        +'<td>'+'<a href="'+article[i].web_url+'">'+article[i].headline.main+'</a>'+'</td>'
+        +'<td>'+article[i].source +'</td>'+'</tr>'
+      );
+    //  document.getElementsByClassName('final')[0].innerHTML = "<tr>" + article[i].pub_date + "</tr>";
+    //  document.getElementsByClassName('final')[0].innerHTML = "" + article[i].abstract;
+    //  document.getElementsByClassName('final')[0].innerHTML = "" + article[i].source;
+    //  document.getElementsByClassName('final')[0].innerHTML = "" + article[i].headline.main;
+    //  document.getElementsByClassName('final')[0].innerHTML = "" + article[i].web_url;
+
+  }};
+
+
+</script>
+</html>
